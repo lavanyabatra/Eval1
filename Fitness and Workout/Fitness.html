@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness & Workout - YumHealth</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Raleway', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F0F2F5;
+            color: #333;
+        }
+
+        /* Navigation bar styles (unchanged as per your request) */
+        .navbar {
+            margin: 0;
+            border-radius: 0;
+            background: linear-gradient(90deg, #0A1172 0%, #0D1F2D 100%); /* Blue to black gradient */
+            border: none;
+        }
+        .navbar-header button {
+            background-color: #fff;
+            border: none;
+            color: #0A1172;
+            padding: 5px 10px;
+            font-size: 10px;
+        }
+        .navbar-header .navbar-brand {
+            color: #fff !important;
+            font-weight: bold;
+        }
+        .navbar-nav > li > a {
+            color: #fff !important;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .navbar-nav > li > a:hover, .navbar-nav > li.active > a {
+            color: #A4D4F2 !important; /* Light blue hover effect */
+            background-color: transparent !important;
+        }
+        .navbar-brand-centered {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Video background section */
+        .video-section {
+            position: relative;
+            height: 110vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .video-section video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            filter: brightness(50%);
+        }
+
+        .video-section .content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInText 2s ease-in-out;
+        }
+
+        .video-section h1 {
+            font-size: 3.5em;
+            text-transform: uppercase;
+            font-family: 'Merriweather', serif;
+            animation: textGlow 1.5s ease-in-out infinite alternate;
+        }
+
+        .video-section p {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        /* How to Start Section */
+.how-to-start {
+    background-color: #E0E6F8; /* Background color similar to the one in the image */
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 50px; /* Adjust this value as needed to match the spacing */
+}
+
+.how-to-start h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.how-to-start p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.step {
+    flex: 1;
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.step-number {
+    font-size: 1.5em;
+    color: #0A1172; /* Color matching the circles */
+    margin-bottom: 10px;
+}
+
+.step h4 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 1em;
+    color: #777;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+        /* Advanced Animations */
+        .slide-in {
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .zoom-in {
+            animation: zoomIn 1s ease-out;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Workout and wellness sections */
+        .section {
+            padding: 50px 20px;
+        }
+
+        .workout-section, .wellness-section {
+            background-color: #E0E6F8;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .workout-section h2, .wellness-section h2 {
+            color: #0A1172;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .workout-routines, .wellness-tips {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .routine, .tip {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            background-color: #F5F7FB;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .routine:hover, .tip:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .routine h4, .tip h4 {
+            color: #0A1172;
+            margin-bottom: 15px;
+        }
+
+        .routine p, .tip p {
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        /* Adding Images */
+        .routine img, .tip img {
+            width: 100%;
+            height: 60%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            animation: zoomIn 1s ease-out;
+        }
+
+        /* Watch and Learn Section */
+.watch-learn-section {
+    background-color: #F5F7FB;
+    border-radius: 10px;
+    padding: 50px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.watch-learn-section h2 {
+    color: #0A1172;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.watch-learn-section p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: #E0E6F8;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .testimonials-section h2 {
+            color: #0A1172;
+            margin-bottom: 50px;
+            font-size: 2.5em;
+        }
+
+        .testimonial {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .testimonial p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .testimonial .author {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #0A1172;
+        }
+
+        /* Call to action section */
+        .cta-section {
+            background: linear-gradient(90deg, #0A1172 0%, #0D1F2D 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Merriweather', serif;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-section a {
+            color: white;
+            background-color: #0A1172;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-section a:hover {
+            background-color: #0D1F2D;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #E0E6F8;
+            color: #0A1172;
+            padding: 30px 20px;
+            text-align: left;
+            font-size: 1em;
+        }
+
+        footer h4 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #0A1172;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: #0A1172;
+        }
+
+        footer .social-icons a {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #0A1172;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #0D1F2D;
+        }
+
+        footer p {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        /* Animations */
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navigation bar (unchanged) -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">YumHealth</a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar-menu">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><a href="#">Fitness Tracker</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+    <!-- Video background section -->
+    <section class="video-section">
+        <video autoplay loop muted>
+            <source src="fv.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h6>Get Fit, Stay Healthy</h6>
+            <h1><b>Welcome to Your Fitness Journey</b></h1>
+            <p>Discover a variety of workout routines and wellness tips to help you achieve your health goals. Let's make fitness fun and effective together!</p>
+        </div>
+    </section>
+
+    <!-- How to Start Section -->
+    <section class="how-to-start section">
+  <h2>How to Start?</h2>
+  <p>Follow these simple steps to kickstart your fitness journey with YumHealth.</p>
+  <div class="steps">
+      <div class="step">
+          <div class="step-number">01</div>
+          <h4>Set Your Goals</h4>
+          <p>Define your fitness objectives and track your progress along the way.</p>
+      </div>
+      <div class="step">
+          <div class="step-number">02</div>
+          <h4>Choose a Routine</h4>
+          <p>Select from a variety of workout plans tailored to your needs.</p>
+      </div>
+      <div class="step">
+          <div class="step-number">03</div>
+          <h4>Stay Committed</h4>
+          <p>Keep motivated with our community support and expert guidance.</p>
+      </div>
+      <div class="image-container">
+          <img src="fit7.jpg" alt="How to Start Image">
+      </div>
+  </div>
+    </section>
+
+    <!-- Workout section -->
+    <section class="section workout-section slide-in">
+        <h2>Workout Routines</h2>
+        <div class="workout-routines">
+            <div class="routine">
+                <img src="fit1.webp" alt="Routine 1">
+                <h4>Cardio Blast</h4>
+                <p>Get your heart pumping with this high-intensity cardio workout that will help you burn calories and improve your endurance.</p>
+            </div>
+            <div class="routine">
+                <img src="fit2.jpeg" alt="Routine 2">
+                <h4>Strength Training</h4>
+                <p>Build muscle and strength with these targeted exercises designed to improve your overall fitness and tone your body.</p>
+            </div>
+            <div class="routine">
+                <img src="fit3.webp" alt="Routine 3">
+                <h4>Yoga & Flexibility</h4>
+                <p>Enhance your flexibility and calm your mind with our yoga routines that combine physical postures with breath control.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wellness section -->
+    <section class="section wellness-section zoom-in">
+        <h2>Wellness Tips</h2>
+        <div class="wellness-tips">
+            <div class="tip">
+                <img src="fit4.webp" alt="Tip 1">
+                <h4>Mindful Eating</h4>
+                <p>Learn to eat with awareness and appreciate every bite. Our mindful eating tips will help you develop a healthier relationship with food.</p>
+            </div>
+            <div class="tip">
+                <img src="fit5.jpg" alt="Tip 2">
+                <h4>Mental Wellness</h4>
+                <p>Prioritize your mental health with strategies to reduce stress, improve sleep, and maintain a positive mindset.</p>
+            </div>
+            <div class="tip">
+                <img src="fit6.jpg" alt="Tip 3">
+                <h4>Healthy Habits</h4>
+                <p>Incorporate small but impactful changes into your daily routine to build healthier habits that last a lifetime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Watch and Learn Section -->
+    <section class="section watch-learn-section zoom-in">
+      <h2>Watch and Learn</h2>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p>Learn the best workout techniques and healthy habits by watching our expert-led video tutorials.</p>
+  </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section section">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial">
+          <p>"YumHealth has completely transformed my life. I feel healthier and more energetic!"</p>
+          <p class="author">- John Doe</p>
+      </div>
+      <div class="testimonial">
+          <p>"The workout routines are easy to follow and have made a huge difference in my fitness."</p>
+          <p class="author">- Jane Smith</p>
+      </div>
+      <div class="testimonial">
+          <p>"I love the wellness tips! They have helped me create a balanced lifestyle."</p>
+          <p class="author">- Mark Wilson</p>
+      </div>
+  </section>
+
+    <!-- Call to action section -->
+    <section class="cta-section fade-in">
+        <h2>Join Our Community</h2>
+        <p>Stay updated with the latest wellness tips, workout routines, and healthy recipes. Sign up for our newsletter today!</p>
+        <a href="#">Join Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>About YumHealth</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Mission & Vision</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4>Subscribe</h4>
+                    <p>Get the latest updates directly to your inbox.</p>
+                    <form action="#">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <p>&copy; 2024 YumHealth. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (unchanged) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

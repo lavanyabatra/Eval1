@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - YumHealth</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Raleway', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F0F2F5; /* Light grey for background */
+            color: #333;
+        }
+
+        /* Navigation bar styles */
+        .navbar {
+            margin: 0;
+            border-radius: 0;
+            background: linear-gradient(90deg, #0A1172 0%, #0D1F2D 100%); /* Blue to black gradient */
+            border: none;
+        }
+        .navbar-header button {
+            background-color: #fff;
+            border: none;
+            color: #0A1172;
+            padding: 5px 10px;
+            font-size: 10px;
+        }
+        .navbar-header .navbar-brand {
+            color: #fff !important;
+            font-weight: bold;
+        }
+        .navbar-nav > li > a {
+            color: #fff !important;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .navbar-nav > li > a:hover, .navbar-nav > li.active > a {
+            color: #A4D4F2 !important; /* Light blue hover effect */
+            background-color: transparent !important;
+        }
+        .navbar-brand-centered {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Parallax section */
+        .about-section {
+            position: relative;
+            height: 60vh;
+            background: url('https://img.freepik.com/free-photo/side-view-adult-meditating-with-light_23-2149711526.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1724716800&semt=ais_hybrid') no-repeat center center/cover;
+            background-attachment: fixed; /* Parallax effect */
+            color: #0A1172;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .about-section h1 {
+            font-size: 3.5em;
+            text-transform: uppercase;
+            font-family: 'Merriweather', serif;
+            animation: fadeInText 2s ease-in-out, textGlow 1.5s ease-in-out infinite alternate;
+        }
+
+        /* About content styles */
+        .about-content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background: linear-gradient(135deg, #E0E6F8 0%, #F5F7FB 100%); /* Light blue to white gradient */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: slideUp 1s ease-out;
+            color: #333;
+        }
+
+        .about-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #0A1172;
+            text-align: center;
+        }
+
+        .about-content p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+
+        .about-content p span {
+            color: #0A1172;
+            font-weight: bold;
+        }
+
+        /* Team section */
+        .team-section {
+            background-color: #F0F2F5;
+            padding: 50px 20px;
+        }
+
+        .team-section h2 {
+            color: #0A1172;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            max-width: 300px;
+            margin-bottom: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 100%;
+            max-width: 200px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+
+        .team-member h4 {
+            color: #0A1172;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .team-member p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* FAQ section */
+        .faq-section {
+            background-color: #E0E6F8;
+            padding: 50px 20px;
+        }
+
+        .faq-section h2 {
+            color: #0A1172;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .faqs {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+        }
+
+        .faq h4 {
+            font-size: 1.5em;
+            color: #0A1172;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .faq h4:hover {
+            color: #0D1F2D;
+        }
+
+        .faq p {
+            display: none;
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Testimonials section */
+        .testimonials-section {
+            background-color: #E0E6F8;
+            padding: 50px 20px;
+        }
+
+        .testimonials-section h2 {
+            color: #0A1172;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .testimonials {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            background-color: #F5F7FB;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            margin: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-10px);
+        }
+
+        .testimonial p {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .testimonial h4 {
+            margin-top: 20px;
+            color: #0A1172;
+        }
+
+        .testimonial h5 {
+            color: #0A1172;
+            font-size: 1.1em;
+        }
+
+        /* Call to action section */
+        .cta-section {
+            background: linear-gradient(90deg, #0A1172 0%, #0D1F2D 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Merriweather', serif;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-section a {
+            color: white;
+            background-color: #0A1172;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-section a:hover {
+            background-color: #0D1F2D;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #E0E6F8;
+            color: #0A1172;
+            padding: 30px 20px;
+            text-align: left;
+            font-size: 1em;
+        }
+
+        footer h4 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #0A1172;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: #0A1172;
+        }
+
+        footer .social-icons a {
+            font-size: 24px;
+            margin-right: 15px;
+            color: #0A1172;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #0D1F2D;
+        }
+
+        footer p {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #333;
+        }
+        /* Animation keyframes */
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes textGlow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">YumHealth</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Fitness Tracker</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h1>About YumHealth</h1>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <h2>Our Mission</h2>
+        <p>At <span>YumHealth</span>, our mission is to provide delicious, nutritious, and sustainable meal options that support your health and well-being.</p>
+        <p>We believe that healthy eating should be <span>enjoyable</span> and <span>accessible</span> to everyone, and we strive to create meals that are not only good for you but also taste amazing.</p>
+        <p>Our dedicated team works tirelessly to source the finest ingredients and create recipes that are both <span>innovative</span> and <span>nutritious</span>, ensuring that every meal from YumHealth is a step toward a healthier, happier you.</p>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200" alt="Team Member">
+                <h4>Lakshay Garg</h4>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200" alt="Team Member">
+                <h4>Nishtha Aggarwal</h4>
+                <p>Head Nutritionist</p>
+            </div>
+            <div class="team-member">
+                <img src="https://via.placeholder.com/200" alt="Team Member">
+                <h4>Lavanya Batra</h4>
+                <p>Chef & Culinary Director</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ section -->
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faqs">
+            <div class="faq">
+                <h4>What is YumHealth?</h4>
+                <p>YumHealth is a company dedicated to providing healthy, delicious meals made from high-quality ingredients. Our products are designed to cater to a variety of dietary needs and preferences.</p>
+            </div>
+            <div class="faq">
+                <h4>Where can I purchase YumHealth products?</h4>
+                <p>You can purchase our products directly from our website or through various retail partners listed on our site.</p>
+            </div>
+            <div class="faq">
+                <h4>Do you offer vegan and gluten-free options?</h4>
+                <p>Yes, we offer a wide range of vegan and gluten-free options to cater to different dietary preferences.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p>"YumHealth has completely transformed the way I eat. Their meals are delicious, healthy, and so convenient!"</p>
+                <h4>Emily R.</h4>
+                <h5>Customer</h5>
+            </div>
+            <div class="testimonial">
+                <p>"I love the variety of meals offered by YumHealth. There's always something new and exciting to try!"</p>
+                <h4>Mark S.</h4>
+                <h5>Customer</h5>
+            </div>
+            <div class="testimonial">
+                <p>"The quality of ingredients and the attention to detail in every meal is outstanding. YumHealth is my go-to for healthy eating."</p>
+                <h4>Sarah T.</h4>
+                <h5>Customer</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <h2>Join Us on the Journey to Better Health</h2>
+        <p>Ready to transform your diet and improve your well-being? Sign up today and start enjoying delicious, nutritious meals delivered right to your door.</p>
+        <a href="#">Get Started</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>About YumHealth</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Mission & Vision</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-twitter"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4>Subscribe</h4>
+                    <p>Get the latest updates directly to your inbox.</p>
+                    <form action="#">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <p>&copy; 2024 YumHealth. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
