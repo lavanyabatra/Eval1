@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join YumHealth Community</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000; /* Black background */
+            color: #fff; /* White text color */
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        .form-container {
+            margin-top: 50px;
+            background: #1a1a1a; /* Darker shade of black */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1); /* Softer white shadow */
+        }
+        .form-header h2 {
+            font-size: 28px;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .form-header p {
+            font-size: 14px;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+        .form-group label {
+            color: #bbb; /* Lighter gray for labels */
+        }
+        .form-control {
+            background-color: #333; /* Dark gray background for inputs */
+            color: #fff; /* White text color for inputs */
+            border: 1px solid #555; /* Border with a slightly lighter gray */
+        }
+        .form-control:focus {
+            background-color: #444;
+            border-color: #888;
+            color: #fff;
+        }
+        .btn-primary {
+            background-color: #fff; /* White button background */
+            color: #000; /* Black text color */
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .btn-primary:hover {
+            background-color: #ccc;
+            color: #000;
+        }
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+          }
+         
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="video4.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+    <div class="container div1">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>Join YumHealth Community</h2>
+                        <p>Subscribe to our newsletter and get personalized diet plans!</p>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter a password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="diet">Preferred Diet Plan</label>
+                            <select class="form-control" id="diet" required>
+                                <option value="">Select a diet plan</option>
+                                <option value="keto">Keto</option>
+                                <option value="vegan">Vegan</option>
+                                <option value="vegetarian">Vegetarian</option>
+                                <option value="paleo">Paleo</option>
+                                <option value="low-carb">Low Carb</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Join Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
