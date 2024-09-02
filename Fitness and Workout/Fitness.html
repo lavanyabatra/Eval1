@@ -8,42 +8,42 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* General styles */
         body {
-            font-family: 'Raleway', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F0F2F5;
-            color: #333;
-        }
+    font-family: 'Raleway', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: Black; /* Light grey background */
+    color: #000000; /* Black text */
+}
 
-        /* Navigation bar styles (unchanged as per your request) */
-        .navbar {
-            margin: 0;
-            border-radius: 0;
-            background: linear-gradient(90deg, #0A1172 0%, #0D1F2D 100%); /* Blue to black gradient */
-            border: none;
-        }
-        .navbar-header button {
-            background-color: #fff;
-            border: none;
-            color: #0A1172;
-            padding: 5px 10px;
-            font-size: 10px;
-        }
-        .navbar-header .navbar-brand {
-            color: #fff !important;
-            font-weight: bold;
-        }
-        .navbar-nav > li > a {
-            color: #fff !important;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        .navbar-nav > li > a:hover, .navbar-nav > li.active > a {
-            color: #A4D4F2 !important; /* Light blue hover effect */
-            background-color: transparent !important;
-        }
+/* Navigation bar styles */
+.navbar {
+    margin: 0;
+    border-radius: 0;
+    background: linear-gradient(90deg, #084c15 0%, #000000 100%); /* Dark blue to black gradient */
+    border: none;
+}
+.navbar-header button {
+    background-color: #ffffff; /* White button */
+    border: none;
+    color: #14213d; /* Dark blue text */
+    padding: 5px 10px;
+    font-size: 10px;
+}
+.navbar-header .navbar-brand {
+    color: #ffffff !important; /* White text */
+    font-weight: bold;
+}
+.navbar-nav > li > a {
+    color: #ffffff !important; /* White text */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.navbar-nav > li > a:hover, .navbar-nav > li.active > a {
+    color: #fca311 !important; /* Bright yellow hover effect */
+    background-color: transparent !important;
+}
+
         .navbar-brand-centered {
             position: absolute;
             left: 50%;
@@ -52,16 +52,15 @@
 
         /* Video background section */
         .video-section {
-            position: relative;
-            height: 110vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-
+    position: relative;
+    height: 110vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff; /* White text */
+}
         .video-section video {
             position: absolute;
             top: 50%;
@@ -82,34 +81,34 @@
         }
 
         .video-section h1 {
-            font-size: 3.5em;
-            text-transform: uppercase;
-            font-family: 'Merriweather', serif;
-            animation: textGlow 1.5s ease-in-out infinite alternate;
-        }
+    font-size: 3.5em;
+    text-transform: uppercase;
+    font-family: 'Merriweather', serif;
+    color: #fca311; /* Bright yellow text */
+}
 
-        .video-section p {
-            font-size: 1.5em;
-            margin-top: 20px;
-        }
+.video-section p {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #e5e5e5; /* Light grey text */
+}
 
-        /* How to Start Section */
+/* How to Start Section */
 .how-to-start {
-    background-color: #E0E6F8; /* Background color similar to the one in the image */
+    background-color: Black; 
     padding: 50px 20px;
     text-align: center;
     margin-bottom: 50px; /* Adjust this value as needed to match the spacing */
 }
-
 .how-to-start h2 {
-    font-size: 2em;
+    font-size: 3.2em;
     margin-bottom: 20px;
+    color: #fca311; /* Bright yellow text */
 }
-
 .how-to-start p {
     font-size: 1.2em;
     margin-bottom: 40px;
-    color: #555;
+    color: white; /* Black text */
 }
 
 .steps {
@@ -127,19 +126,21 @@
 }
 
 .step-number {
-    font-size: 1.5em;
-    color: #0A1172; /* Color matching the circles */
+    font-size: 1.8em;
+    color: grey; /* Dark blue text */
     margin-bottom: 10px;
 }
 
 .step h4 {
-    font-size: 1.3em;
+    font-size: 2em;
     margin-bottom: 10px;
+    color: #fca311; /* Step heading color */
 }
+
 
 .step p {
     font-size: 1em;
-    color: #777;
+    color: white;
 }
 
 .image-container {
@@ -200,22 +201,19 @@
 
         /* Workout and wellness sections */
         .section {
-            padding: 50px 20px;
-        }
-
-        .workout-section, .wellness-section {
-            background-color: #E0E6F8;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }
-
-        .workout-section h2, .wellness-section h2 {
-            color: #0A1172;
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.5em;
-        }
-
+    padding: 50px 20px;
+}
+.workout-section, .wellness-section {
+    background: url(fit8.jpg);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.workout-section h2, .wellness-section h2 {
+    color: #fca311; /* Bright yellow text */
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 3.2em;
+}
         .workout-routines, .wellness-tips {
             display: flex;
             justify-content: space-between;
@@ -226,28 +224,26 @@
             flex: 1;
             min-width: 250px;
             max-width: 350px;
-            background-color: #F5F7FB;
-            padding: 20px;
+            background-color: #8eb376; /* Bright yellow background */
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             margin: 15px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
-
         .routine:hover, .tip:hover {
             transform: translateY(-10px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
         .routine h4, .tip h4 {
-            color: #0A1172;
-            margin-bottom: 15px;
-        }
+    color: #000000; /* Black text */
+    font-size: 2em;
+}
 
         .routine p, .tip p {
-            color: #333;
-            font-size: 1.1em;
+            color: Black;
+            font-size: 0.8em;
         }
 
         /* Adding Images */
@@ -260,8 +256,8 @@
         }
 
         /* Watch and Learn Section */
-.watch-learn-section {
-    background-color: #F5F7FB;
+        .watch-learn-section {
+    background-color: whitesmoke; /* Section background */
     border-radius: 10px;
     padding: 50px 20px;
     text-align: center;
@@ -269,9 +265,9 @@
 }
 
 .watch-learn-section h2 {
-    color: #0A1172;
+    color: #9b1c06; /* Heading color */
     margin-bottom: 30px;
-    font-size: 2.5em;
+    font-size: 3.2em;
 }
 
 .video-container {
@@ -287,28 +283,32 @@
 
 .watch-learn-section p {
     font-size: 1.2em;
-    color: #555;
+    color: #9b1c06; /* Subheading color */
 }
 
 
         /* Testimonials Section */
         .testimonials-section {
-            background-color: #E0E6F8;
-            padding: 80px 20px;
-            text-align: center;
-        }
+    background: url(fit10.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 20px;
+    text-align: center;
+}
 
-        .testimonials-section h2 {
-            color: #0A1172;
-            margin-bottom: 50px;
-            font-size: 2.5em;
-        }
+.testimonials-section h2 {
+    color: #fca311; /* Heading color */
+    margin-bottom: 50px;
+    font-size: 3.2em;
+}
 
-        .testimonial {
+.testimonial {
             max-width: 600px;
             margin: 0 auto 30px;
             padding: 20px;
-            background-color: #fff;
+            background-color: #ffffff; /* Testimonial background */
+            color: #084c15; /* Text color */
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             animation: fadeIn 1.5s ease-out;
@@ -322,16 +322,16 @@
         .testimonial .author {
             margin-top: 15px;
             font-weight: bold;
-            color: #0A1172;
+            color: #084c15;
         }
 
         /* Call to action section */
         .cta-section {
-            background: linear-gradient(90deg, #0A1172 0%, #0D1F2D 100%);
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
+    background: linear-gradient(90deg, #084c15 0%, #000000 100%); /* Dark blue to black gradient */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 50px 20px;
+}
 
         .cta-section h2 {
             font-size: 2.5em;
@@ -348,7 +348,7 @@
 
         .cta-section a {
             color: white;
-            background-color: #0A1172;
+            background-color: #fca311; /* Bright yellow button */
             padding: 15px 30px;
             border-radius: 30px;
             text-decoration: none;
@@ -357,24 +357,26 @@
             transition: background-color 0.3s ease;
         }
 
-        .cta-section a:hover {
-            background-color: #0D1F2D;
-        }
+.cta-section a:hover {
+    background-color: #14213d; /* Dark blue hover */
+}
+
+
 
         /* Footer styles */
         footer {
-            background-color: #E0E6F8;
-            color: #0A1172;
-            padding: 30px 20px;
-            text-align: left;
-            font-size: 1em;
-        }
+    background-color: #C0A69B; /* Dark blue background */
+    color: #ffffff; /* White text */
+    padding: 30px 20px;
+    text-align: left;
+    font-size: 1em;
+}
+footer h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: Black; /* Bright yellow text */
+}
 
-        footer h4 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            color: #0A1172;
-        }
 
         footer ul {
             list-style: none;
@@ -386,31 +388,30 @@
         }
 
         footer ul li a {
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+    color: #e5e5e5; /* Light grey text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer ul li a:hover {
+    color: #fca311; /* Bright yellow hover */
+}
 
-        footer ul li a:hover {
-            color: #0A1172;
-        }
+footer .social-icons a {
+    font-size: 24px;
+    margin-right: 15px;
+    color: rgb(59, 24, 24); /* Social icons */
+    transition: color 0.3s ease;
+}
 
-        footer .social-icons a {
-            font-size: 24px;
-            margin-right: 15px;
-            color: #0A1172;
-            transition: color 0.3s ease;
-        }
+footer .social-icons a:hover {
+    color: white; /* Social icons hover */
+}
 
-        footer .social-icons a:hover {
-            color: #0D1F2D;
-        }
-
-        footer p {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #333;
-        }
+footer p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #4a5759; /* Footer text */
+}
 
         /* Animations */
         @keyframes fadeInText {
@@ -555,15 +556,15 @@
       <h2>What Our Clients Say</h2>
       <div class="testimonial">
           <p>"YumHealth has completely transformed my life. I feel healthier and more energetic!"</p>
-          <p class="author">- John Doe</p>
+          <p class="author">- XYZ</p>
       </div>
       <div class="testimonial">
           <p>"The workout routines are easy to follow and have made a huge difference in my fitness."</p>
-          <p class="author">- Jane Smith</p>
+          <p class="author">- ABC</p>
       </div>
       <div class="testimonial">
           <p>"I love the wellness tips! They have helped me create a balanced lifestyle."</p>
-          <p class="author">- Mark Wilson</p>
+          <p class="author">- PQR</p>
       </div>
   </section>
 

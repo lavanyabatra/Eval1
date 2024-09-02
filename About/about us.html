@@ -13,7 +13,7 @@
             font-family: 'Raleway', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #F0F2F5; /* Light grey for background */
+            background: linear-gradient(90deg, #084c15 0%, #000000 100%); /* Blue to black gradient */
             color: #333;
         }
 
@@ -21,7 +21,7 @@
         .navbar {
             margin: 0;
             border-radius: 0;
-            background: linear-gradient(90deg, #0A1172 0%, #0D1F2D 100%); /* Blue to black gradient */
+            background: linear-gradient(90deg, #084c15 0%, #000000 100%); /* Blue to black gradient */
             border: none;
         }
         .navbar-header button {
@@ -53,10 +53,10 @@
         /* Parallax section */
         .about-section {
             position: relative;
-            height: 60vh;
-            background: url('https://img.freepik.com/free-photo/side-view-adult-meditating-with-light_23-2149711526.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1724716800&semt=ais_hybrid') no-repeat center center/cover;
+            height: 50vh;
+            background: url(a8.jpg) no-repeat center center/cover;
             background-attachment: fixed; /* Parallax effect */
-            color: #0A1172;
+            color: #052A0C;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -76,7 +76,7 @@
             max-width: 800px;
             margin: 50px auto;
             padding: 40px;
-            background: linear-gradient(135deg, #E0E6F8 0%, #F5F7FB 100%); /* Light blue to white gradient */
+            background: url(a9.jpg);
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             animation: slideUp 1s ease-out;
@@ -84,9 +84,10 @@
         }
 
         .about-content h2 {
-            font-size: 2.5em;
+            font-size: 3.2em;
+            font-family:'Comic Sans MS, cursive';
             margin-bottom: 20px;
-            color: #0A1172;
+            color: #052A0C;
             text-align: center;
         }
 
@@ -97,21 +98,24 @@
         }
 
         .about-content p span {
-            color: #0A1172;
+            color:rgb(59, 24, 24);
             font-weight: bold;
         }
 
         /* Team section */
         .team-section {
-            background-color: #F0F2F5;
+            background: url(a10.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             padding: 50px 20px;
         }
 
         .team-section h2 {
-            color: #0A1172;
+            color: #ffffff;
             text-align: center;
             margin-bottom: 40px;
-            font-size: 2.5em;
+            font-size: 3.2em;
         }
 
         .team-members {
@@ -139,7 +143,7 @@
             margin-bottom: 15px;
         }
 
-        .team-member h4 {
+        .team-member h3 {
             color: #0A1172;
             margin-bottom: 10px;
             font-size: 1.5em;
@@ -152,12 +156,12 @@
 
         /* FAQ section */
         .faq-section {
-            background-color: #E0E6F8;
+            background-color: linear-gradient(90deg, #084c15 0%, #000000 100%); /* Blue to black gradient */;
             padding: 50px 20px;
         }
 
         .faq-section h2 {
-            color: #0A1172;
+            color: white;
             text-align: center;
             margin-bottom: 40px;
             font-size: 2.5em;
@@ -176,7 +180,7 @@
 
         .faq h4 {
             font-size: 1.5em;
-            color: #0A1172;
+            color: white;
             cursor: pointer;
             transition: color 0.3s ease;
         }
@@ -195,15 +199,18 @@
 
         /* Testimonials section */
         .testimonials-section {
-            background-color: #E0E6F8;
+            background: url(a12.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             padding: 50px 20px;
         }
 
         .testimonials-section h2 {
-            color: #0A1172;
+            color: #fca311;
             text-align: center;
             margin-bottom: 40px;
-            font-size: 2.5em;
+            font-size: 3.2em;
         }
 
         .testimonials {
@@ -235,17 +242,13 @@
 
         .testimonial h4 {
             margin-top: 20px;
-            color: #0A1172;
-        }
-
-        .testimonial h5 {
-            color: #0A1172;
-            font-size: 1.1em;
+            color: grey;
+            text-align: center;
         }
 
         /* Call to action section */
         .cta-section {
-            background: linear-gradient(90deg, #0A1172 0%, #0D1F2D 100%);
+            background: linear-gradient(90deg, #084c15 0%, #000000 100%);
             color: white;
             text-align: center;
             padding: 50px 20px;
@@ -266,7 +269,7 @@
 
         .cta-section a {
             color: white;
-            background-color: #0A1172;
+            background-color: #fca311;
             padding: 15px 30px;
             border-radius: 30px;
             text-decoration: none;
@@ -279,20 +282,20 @@
             background-color: #0D1F2D;
         }
 
-        /* Footer styles */
-        footer {
-            background-color: #E0E6F8;
-            color: #0A1172;
-            padding: 30px 20px;
-            text-align: left;
-            font-size: 1em;
-        }
+       /* Footer styles */
+       footer {
+    background-color: #C0A69B; /* Dark blue background */
+    color: #ffffff; /* White text */
+    padding: 30px 20px;
+    text-align: left;
+    font-size: 1em;
+}
+footer h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: Black; /* Bright yellow text */
+}
 
-        footer h4 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            color: #0A1172;
-        }
 
         footer ul {
             list-style: none;
@@ -304,31 +307,31 @@
         }
 
         footer ul li a {
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+    color: #e5e5e5; /* Light grey text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer ul li a:hover {
+    color: #fca311; /* Bright yellow hover */
+}
 
-        footer ul li a:hover {
-            color: #0A1172;
-        }
+footer .social-icons a {
+    font-size: 24px;
+    margin-right: 15px;
+    color: rgb(59, 24, 24); /* Social icons */
+    transition: color 0.3s ease;
+}
 
-        footer .social-icons a {
-            font-size: 24px;
-            margin-right: 15px;
-            color: #0A1172;
-            transition: color 0.3s ease;
-        }
+footer .social-icons a:hover {
+    color: white; /* Social icons hover */
+}
 
-        footer .social-icons a:hover {
-            color: #0D1F2D;
-        }
+footer p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #4a5759; /* Footer text */
+}
 
-        footer p {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #333;
-        }
         /* Animation keyframes */
         @keyframes slideUp {
             from {
@@ -404,18 +407,15 @@
         <div class="team-members">
             <div class="team-member">
                 <img src="https://via.placeholder.com/200" alt="Team Member">
-                <h4>Lakshay Garg</h4>
-                <p>Founder & CEO</p>
+                <h3>Lakshay Garg</h3>
             </div>
             <div class="team-member">
                 <img src="https://via.placeholder.com/200" alt="Team Member">
-                <h4>Nishtha Aggarwal</h4>
-                <p>Head Nutritionist</p>
+                <h3>Nishtha Aggarwal</h3>
             </div>
             <div class="team-member">
                 <img src="https://via.placeholder.com/200" alt="Team Member">
-                <h4>Lavanya Batra</h4>
-                <p>Chef & Culinary Director</p>
+                <h3>Lavanya Batra</h3>
             </div>
         </div>
     </section>
@@ -440,24 +440,21 @@
     </div>
 
 
-    <!-- Testimonials Section -->
+    <!--  expert advice -->
     <section class="testimonials-section">
-        <h2>What Our Customers Say</h2>
+        <h2><b>Future Plans</b></h2>
         <div class="testimonials">
             <div class="testimonial">
-                <p>"YumHealth has completely transformed the way I eat. Their meals are delicious, healthy, and so convenient!"</p>
-                <h4>Emily R.</h4>
-                <h5>Customer</h5>
+                <h3><b><center>Health Records Management:</center></b></h3>
+                <h4>Provide tools for users to access, manage, and share their health records securely.</h4>
             </div>
             <div class="testimonial">
-                <p>"I love the variety of meals offered by YumHealth. There's always something new and exciting to try!"</p>
-                <h4>Mark S.</h4>
-                <h5>Customer</h5>
+                <h3><b><center>AI and Chatbots:</center></b></h3>
+                <h4>Implement AI-driven tools and chatbots to offer real-time assistance, answer health-related questions, and provide symptom checking.</h4>
             </div>
             <div class="testimonial">
-                <p>"The quality of ingredients and the attention to detail in every meal is outstanding. YumHealth is my go-to for healthy eating."</p>
-                <h4>Sarah T.</h4>
-                <h5>Customer</h5>
+                <h3><b><center>Community and Support Features:</center></b></h3>
+                <h4>Create forums or support groups to foster community interaction and provide peer support.</h4>
             </div>
         </div>
     </section>
