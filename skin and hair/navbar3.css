@@ -1,0 +1,330 @@
+body{
+   font-family: 'Playfair Display';/*background-image:url(background.jpeg); background-repeat: no-repeat; 
+    background-attachment: fixed;background-size: 50%;*/
+    
+}
+.div1{
+    background-image:url(background.jpeg); background-repeat: no-repeat; 
+    background-attachment: ;background-size: 50% 85%;
+    
+}
+.navbar{
+    width: 50%;background-color: rgb(255, 255, 255,0.9);font-size: 1.7rem;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-bottom:solid black 2px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar a{
+    color: black;
+}
+
+  .navbar-nav > li > a:hover {
+    color: blue;transition-delay:0.2s;
+
+  }
+  .navbar-brand:hover {
+    color: blue;
+  }
+
+.navbar {
+    margin: 0px auto;top: 20px;
+    text-align: center;
+  }
+
+.navbar-brand-centered {
+    left: 50%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  .navbar .navbar-collapse {
+    text-align: center;
+    position: relative;
+  }
+  .ani{
+    position: relative;
+    color: black;
+    
+    left: 37%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    padding: 0 40px;
+    height: 50px;
+  
+}
+.top{
+    text-transform: uppercase;
+    font-size: 55px;
+    line-height: 60px;
+    font-weight: 600;
+}
+.top:first-child{
+    animation: anim 17s infinite;
+}
+@keyframes anim{
+    0%{
+        margin-top: 0;
+    }
+    16%{
+        margin-top: -60px;
+    }
+    33%{
+        margin-top: -60px;
+    }
+    50%{
+        margin-top: -60px;
+    }
+    66%{
+        margin-top: 0;
+    }
+    82%{
+        margin-top: 0;
+    }
+    100%{
+        margin-top: 0;
+    }
+    
+}
+.ani{
+    position: absolute;
+    color: black;
+  
+    
+    width: 80vw; /* Width responsive to viewport width */
+    max-width: 600px; /* Maximum width for larger screens */
+    transform: translate(-50%, -50%);
+    padding: 0 40px;
+  
+   
+   
+}
+.content{
+    top:100px ;
+}
+.cont_bx h1{
+    text-transform: uppercase;
+    font-size: 55px;
+    line-height: 60px;
+    font-weight: 600;padding-top: 10px;padding-left: 6px;
+}
+.div55{
+    margin-top: 60px;
+  }
+  .no-margin-padding {
+    margin: 0;
+    padding: 0;
+  }
+  .img-ani{
+    position: relative;
+    color: black;
+    top: 198px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    padding: 0px;
+    height:620px;width:760px;
+  }
+  .top1:first-child{
+    animation: anim1 17s infinite;height: 620px;
+}
+@keyframes anim1{
+    0%{
+        margin-top: 0;
+    }
+    16%{
+        margin-top: -620px;
+    }
+    33%{
+        margin-top: -620px;
+    }
+    50%{
+        margin-top: -620px;
+    }
+    66%{
+        margin-top: 0;
+    }
+    82%{
+        margin-top: 0;
+    }
+    100%{
+        margin-top: 0;
+    }
+    
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: ;
+}
+
+.grid-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.grid-item h2 {
+    margin: 15px 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.grid-item p {
+    font-size: 16px;
+    color: #666;
+}
+.no-padding-img-border1{
+    padding-left: 200px;
+}
+.div32{
+    width: 100%; background-color: black;padding: 20px;color:#ffdcd6 ;
+}
+.yuo{
+    padding-left: 200px;
+}
+.para1{
+    font-size: 2rem;
+}
+.para2{
+    font-size: 3rem;font-weight: 600;font-family: Arial, sans-serif;
+}
+.para3{
+    font-size: 2rem;
+}
+.para4{
+    font-size: 2rem;font-weight: 600;
+   
+    
+ 
+    
+    font-family: 'Comic Sans MS', cursive;
+    
+    
+    
+    
+    
+}
+.para5{
+    font-size: 1.5rem;
+}
+.div87{
+    margin-bottom: 60px;
+  }
+  .image-container1 {
+      position: relative;
+      width: 100%;
+      height: 300px; /* Match the height of the images */
+      overflow: hidden;
+  }
+  
+  .img-responsive1 {
+      width: 100%;
+      height: 100%;
+      /* Ensure images cover the container without stretching */
+     
+  }
+  .div90{
+    padding-bottom: 60px;
+  }
+  .div32{}
+  
+  
+  
+  .text-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white; /* Text color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .image-container1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 67, 233, 0.2));
+    z-index: 1; /* Ensure the gradient is below the text */
+    transition: background 0.3s ease; /* Smooth transition for the gradient */
+  }
+  
+  
+  
+  .image-container1:hover .text-overlay {
+    opacity: 1; /* Ensure the text is visible on hover */
+  }
+  .para9{
+    font-size: 3rem;font-weight: 600;font-family: Arial, sans-serif;text-align: center;padding-top:60px;padding-bottom: 60px;
+  }
+  footer {
+    background-color: #ffdcd6 ; /* Dark blue background */
+    color: #ffffff; /* White text */
+    padding: 30px 20px;
+    text-align: left;
+    font-size: 1em;
+}
+footer h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: Black; /* Bright yellow text */
+}
+
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+    color: black; /* Light grey text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer ul li a:hover {
+    color: black; /* Bright yellow hover */
+}
+
+footer .social-icons a {
+    font-size: 24px;
+    margin-right: 15px;
+    color: rgb(59, 24, 24); /* Social icons */
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: black; /* Social icons hover */
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: black; /* Footer text */
+}
+  .cont{
+    /* background-image:url(pink.jpg); background-repeat: no-repeat; 
+   background-size: cover;width: 100%; */background-color: ;
+  }

@@ -4,7 +4,7 @@ body{
     
 }
 .back{
-  background-image: /*linear-gradient(rgba(247, 244, 244, 0.3),rgba(247, 244, 244, 0.3)),*/url(backgro.jpg); background-repeat: no-repeat; 
+  background-image: /*linear-gradient(rgba(247, 244, 244, 0.3),rgba(247, 244, 244, 0.3)),*/url(backgro1.jpg); background-repeat: no-repeat; 
     background-attachment: fixed;background-size: 100%;margin: 0;padding: 0;padding-bottom: 40px;
 }
 .navbar{
@@ -160,14 +160,53 @@ color: white;
 }
 
 
-.bg-footer{
-  background-color: black;
-  padding: 50px 0 30px;color: #ffffff;
+footer {
+  background-color: black ; /* Dark blue background */
+  color: #ffffff; /* White text */
+  padding: 30px 20px;
+  text-align: left;
+  font-size: 1em;
 }
-.bg-footer a {
-  text-decoration: none;
-  color: white;
+footer h4 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: white; /* Bright yellow text */
+}
 
+
+      footer ul {
+          list-style: none;
+          padding: 0;
+      }
+
+      footer ul li {
+          margin-bottom: 10px;
+      }
+
+      footer ul li a {
+  color: white; /* Light grey text */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+footer ul li a:hover {
+  color: white; /* Bright yellow hover */
+}
+
+footer .social-icons a {
+  font-size: 24px;
+  margin-right: 15px;
+  color: rgb(59, 24, 24); /* Social icons */
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: white; /* Social icons hover */
+}
+
+footer p {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: white; /* Footer text */
 }
 .no-margin-padding {
   margin: 0;
